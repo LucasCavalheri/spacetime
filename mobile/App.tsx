@@ -38,7 +38,7 @@ export default function App() {
             Sua cápsula do tempo
           </Text>
           <Text className="text-center font-body text-base leading-relaxed text-gray-100">
-            Colecione momentos marcantes da sua jornada e comparilhe (se quiser)
+            Colecione momentos marcantes da sua jornada e compartilhe (se quiser)
             com o mundo!
           </Text>
         </View>
