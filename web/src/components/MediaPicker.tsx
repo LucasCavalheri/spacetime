@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { ChangeEvent, useState } from 'react'
 
 export function MediaPicker() {
@@ -20,17 +19,18 @@ export function MediaPicker() {
     <>
       <input
         onChange={onFileSelected}
+        name="coverUrl"
         type="file"
         id="midia"
         accept="images/*"
         className="invisible h-0 w-0"
       />
       {preview && (
-        <Image
+        // eslint-disable-next-line
+        <img
           src={preview}
           alt="Imagem"
           className="aspect-video w-full rounded-lg object-cover"
-          unoptimized
         />
       )}
     </>
