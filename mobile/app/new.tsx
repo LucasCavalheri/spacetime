@@ -49,8 +49,8 @@ export default function NewMemory() {
 
       uploadFormData.append('file', {
         uri: preview,
-        name: 'image',
-        type: 'image/jpeg, image/png',
+        name: 'image.jpg',
+        type: 'image/jpg',
       } as any)
 
       const uploadResponse = await api.post('/upload', uploadFormData, {
