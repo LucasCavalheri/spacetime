@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['avatars.githubusercontent.com', '192.168.15.3'],
+    domains: [
+      'avatars.githubusercontent.com',
+      String(process.env.NEXT_PUBLIC_API_URL),
+    ],
   },
 }
 
