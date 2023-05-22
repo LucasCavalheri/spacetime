@@ -6,6 +6,7 @@ import { Camera } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { FormEvent } from 'react'
 import { MediaPicker } from './MediaPicker'
+import { DeleteMemory } from './DeleteMemory'
 
 interface EditMemoryProps {
   memory: {
@@ -85,12 +86,15 @@ export function EditMemoryForm({ memory }: EditMemoryProps) {
       >
         {memory.content}
       </textarea>
-      <button
-        className="inline-block self-end rounded-full bg-green-500 px-5 py-3 font-alt text-sm uppercase leading-none text-black hover:bg-green-600"
-        type="submit"
-      >
-        Salvar Edição
-      </button>
+      <div className="flex justify-between">
+        <DeleteMemory memory={memory} />
+        <button
+          className="inline-block self-end rounded-full bg-green-500 px-5 py-3 font-alt text-sm uppercase leading-none text-black hover:bg-green-600"
+          type="submit"
+        >
+          Salvar Edição
+        </button>
+      </div>
     </form>
   )
 }
